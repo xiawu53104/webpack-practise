@@ -1,0 +1,17 @@
+:root {
+  --mainColor: rgba(18, 52, 86, 0.47059);
+}
+div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body {
+  color: blue;
+  font-size: 20px;
+  background-color: rgba(18, 52, 86, 0.47059);
+  background-color: var(--mainColor);
+}
+
