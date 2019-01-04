@@ -2,6 +2,7 @@ const webpackConfig = require('./config.js');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+// process.env.NODE_ENV = 'development';
 const compiler = webpack(webpackConfig);
 const express = require('express');
 const proxy = require('http-proxy-middleware');
