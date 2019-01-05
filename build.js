@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const webpackConfig = require('./config.js');
+const webpackConfig = require('./webpack.config.js');
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
