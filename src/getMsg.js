@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 var btn = document.getElementsByClassName('btn')[0];
 window.addEventListener('click', function () {
   var xhr = new window.XMLHttpRequest();

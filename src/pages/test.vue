@@ -3,6 +3,9 @@ import image1 from '../../assets/1.JPG';
 import image2 from '../../assets/2.JPG';
 
 export default {
+  mounted() {
+    window.customerFun();
+  },
   render (h) {
     return (
       <div>
