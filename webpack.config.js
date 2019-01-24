@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // entry: './src/person.js',
@@ -109,7 +110,14 @@ module.exports = {
     }),
     // Vue Loader v15 现在需要配合一个 webpack 插件才能正确使用
     new VueLoaderPlugin(),
-    new OptimizeCSSPlugin()
+    new OptimizeCSSPlugin(),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, './assets'),
+        to: 'assets',
+        ignore: ['*.JPG']
+      }
+    ])
   ],
   mode: process.env.NODE_ENV === 'development' ? 'development' : 'production'
 }
